@@ -1,8 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js AI App
 
-## Getting Started
+Este es un proyecto de práctica para explorar el desarrollo con Inteligencia Artificial utilizando el SDK de Vercel AI y los modelos de Gemini en su capa gratuita.
 
-First, run the development server:
+## 🎯 Propósito
+
+Este repositorio está diseñado como un proyecto de aprendizaje y experimentación para:
+
+- Probar el desarrollo con IA a través del [SDK de Vercel AI](https://sdk.vercel.ai/docs)
+- Experimentar con los modelos de **Google Gemini** (específicamente `gemini-2.5-flash`) utilizando su capa gratuita
+- Construir una aplicación de chat/completions simple con Next.js
+
+## 🛠️ Tecnologías Utilizadas
+
+- **[Next.js](https://nextjs.org)** - Framework de React para producción
+- **[Vercel AI SDK](https://sdk.vercel.ai/docs)** - SDK oficial de Vercel para integración con modelos de IA
+- **[@ai-sdk/google](https://sdk.vercel.ai/providers/ai-sdk-providers/google)** - Proveedor de Google para el SDK de Vercel AI
+- **Google Gemini 2.5 Flash** - Modelo de IA de Google (capa gratuita)
+- **TypeScript** - Para tipado estático
+- **Tailwind CSS** - Para estilos
+
+## 🚀 Getting Started
+
+Primero, instala las dependencias:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+Luego, configura tu API key de Google Gemini. Crea un archivo `.env.local` en la raíz del proyecto:
+
+```env
+GOOGLE_GENERATIVE_AI_API_KEY=tu_api_key_aqui
+```
+
+Puedes obtener tu API key gratuita en [Google AI Studio](https://makersuite.google.com/app/apikey).
+
+Finalmente, ejecuta el servidor de desarrollo:
 
 ```bash
 npm run dev
@@ -14,23 +53,24 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📝 Funcionalidades
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Interfaz simple de chat para interactuar con el modelo Gemini
+- Generación de texto mediante prompts
+- Diseño responsive con soporte para modo oscuro
 
-## Learn More
+## 📚 Recursos de Aprendizaje
 
-To learn more about Next.js, take a look at the following resources:
+- [Vercel AI SDK Documentation](https://sdk.vercel.ai/docs)
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Google AI Studio](https://makersuite.google.com/) - Para obtener tu API key y probar modelos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚢 Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+La forma más fácil de desplegar esta aplicación Next.js es usando [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 
-## Deploy on Vercel
+Consulta la [documentación de deployment de Next.js](https://nextjs.org/docs/app/building-your-application/deploying) para más detalles.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Nota:** Asegúrate de configurar la variable de entorno `GOOGLE_GENERATIVE_AI_API_KEY` en tu plataforma de deployment.
